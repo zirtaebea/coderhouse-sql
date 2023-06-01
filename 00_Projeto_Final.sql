@@ -80,3 +80,6 @@ ADD CONSTRAINT FK_ALUNOS_ID_TURMA FOREIGN KEY FK_ALUNOS_ID_TURMA (id_turma)
 
 -- alterando o tipo da coluna total_pago PARA INT
 ALTER TABLE financeiro MODIFY total_pago INT;
+
+-- views (?)
+-- n_matricula, nome, status_pagamento, total_pago -> consulta pagamento de alunos
