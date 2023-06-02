@@ -84,3 +84,4 @@ ALTER TABLE financeiro MODIFY total_pago INT;
 -- views (?)
 -- n_matricula, nome, status_pagamento, total_pago -> consulta pagamento de alunos
 -- teste
+-- ESPECIFICAR CAMPOS QUE NÃO SAO NULOS
