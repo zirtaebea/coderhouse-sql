@@ -72,9 +72,3 @@ ADD CONSTRAINT FK_PEDIDOS_ID_TRANSACAO FOREIGN KEY FK_PEDIDOS_ID_TRANSACAO (id_t
 ALTER TABLE alunos
 ADD CONSTRAINT FK_ALUNOS_ID_TURMA FOREIGN KEY FK_ALUNOS_ID_TURMA (id_turma) 
 	REFERENCES turmas (id_turma);
-
-
-
--- views 
--- n_matricula, nome, status_pagamento, total_pago -> consulta pagamento de alunos
--- ESPECIFICAR CAMPOS QUE NÃO SAO NULOS
