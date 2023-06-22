@@ -21,7 +21,9 @@ INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estor
 ('boleto', 500, 25, 1, 475,0),
 ('pix', 500, 25, 1, 475,0);
 
--- historico aluno
+-- historico aluno 
+-- a tabela historico aluno é menor que a tabela de alunos uma vez que só entram
+-- no cadastro/historico aqueles que realizaram o pagamento
 insert into historico_alunos (id_turma, id_aluno, data_insc, contato, experiencia, expectativas, frequencia) VALUES 
 (3, 4, '2022-10-11', 71999295556, 0, 'blabla', 4),
 (2, 2,'2023-06-05', 21999999999, 1, 'Andar na perna de pau', 1),
