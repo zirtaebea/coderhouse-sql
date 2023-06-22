@@ -3,53 +3,48 @@ use Projeto_final;
 
 -- criando tabelas
 CREATE TABLE historico_alunos (
-	n_matricula INT PRIMARY KEY, -- CHAVE PRIMARIA
-	id_pedido INT, -- FK REFERENCIANDO PK id_pedido DA TABELA pedidos 
-	id_turma INT, -- FK REFERENCIANDO PK id_turma DA TABELA turma
-	id_aluno INT, -- FK REFERENCIANDO PK id_aluno DA TABELA alunos
-	data_hora_insc DATETIME,
-	contato VARCHAR(20),
-	experiencia VARCHAR(3),
-	expectativas VARCHAR(200),
-	frequencia INT
+	n_matricula INT AUTO_INCREMENT PRIMARY KEY, -- CHAVE PRIMARIA
+	id_turma INT NOT NULL, -- FK REFERENCIANDO PK id_turma DA TABELA turma
+	id_aluno INT NOT NULL, -- FK REFERENCIANDO PK id_aluno DA TABELA alunos
+	data_insc DATE NOT NULL,
+	contato VARCHAR(20) NOT NULL,
+	experiencia BIT NOT NULL,
+	expectativas VARCHAR(200) DEFAULT 'Não respondeu',
+	frequencia INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE pedidos (
 	id_pedido INT AUTO_INCREMENT PRIMARY KEY, -- CHAVE PRIMARIA
-	n_matricula INT, -- FK REFERENCIANDO PK n_matricula DA TABELA historico_alunos
-	id_transacao INT, -- FK REFERENCIANDO PK id_transacao DA TABELA financeiro
-	status_pagamento VARCHAR(20)
+	n_matricula INT NOT NULL, -- FK REFERENCIANDO PK n_matricula DA TABELA historico_alunos
+	id_transacao INT NOT NULL, -- FK REFERENCIANDO PK id_transacao DA TABELA financeiro
+	status_pagamento VARCHAR(20) 
 );
 
 CREATE TABLE financeiro (
 	id_transacao INT AUTO_INCREMENT PRIMARY KEY, -- CHAVE PRIMARIA
-	metodo_pagamento VARCHAR(20),
-	total_pago FLOAT,
-	vt_estornaveis INT,
-	vt_n_estornaveis INT,
-	v_liquido INT,
-	estornado INT
+	metodo_pagamento VARCHAR(20) NOT NULL,
+	total_pago INT NOT NULL,
+	vt_estornaveis INT NOT NULL DEFAULT 0,
+	vt_n_estornaveis INT DEFAULT 0,
+	v_liquido INT NOT NULL,
+	estornado INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE alunos (
 	id_aluno INT AUTO_INCREMENT PRIMARY KEY, -- CHAVE PRIMARIA
-	nome VARCHAR(50),
-	data_nascimento DATE,
-	id_turma INT -- FK REFERENCIANDO PK id_turma DA TABELA turma
+	nome VARCHAR(50) NOT NULL,
+	data_nascimento DATE NOT NULL,
+	id_turma INT NOT NULL -- FK REFERENCIANDO PK id_turma DA TABELA turma
 );
 
 CREATE TABLE turmas (
 	id_turma INT AUTO_INCREMENT PRIMARY KEY, -- CHAVE PRIMARIA
-	horario_turma VARCHAR(10),
-	qt_aulas INT
+	horario_turma VARCHAR(10) NOT NULL,
+	qt_aulas INT NOT NULL
 );
 
 -- criando chaves estrangeiras
 -- 1) historico_alunos 
--- FK ID PEDIDO REFERENCIANDO TABELA PEDIDOS
-ALTER TABLE historico_alunos 
-ADD CONSTRAINT FK_HISTORICO_ALUNOS_ID_PEDIDO FOREIGN KEY FK_HISTORICO_ALUNOS_ID_PEDIDO (id_pedido) 
-	REFERENCES pedidos (id_pedido); 
 
 -- FK ID TURMA REFERENCIANDO TABELA TURMA
 ALTER TABLE historico_alunos 
@@ -78,8 +73,7 @@ ALTER TABLE alunos
 ADD CONSTRAINT FK_ALUNOS_ID_TURMA FOREIGN KEY FK_ALUNOS_ID_TURMA (id_turma) 
 	REFERENCES turmas (id_turma);
 
--- alterando o tipo da coluna total_pago PARA INT
-ALTER TABLE financeiro MODIFY total_pago INT;
+
 
 -- views 
 -- n_matricula, nome, status_pagamento, total_pago -> consulta pagamento de alunos
