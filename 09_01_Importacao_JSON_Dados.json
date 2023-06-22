@@ -1,0 +1,107 @@
+[
+	{
+		"id" : 1,
+		"nome" : "MOTHERBOARD AM4 - ASROCK A320M",
+		"existencia" : 0,
+		"preco" : 6599,
+		"preco_compra" : 4619
+	},
+	{
+		"id" : 2,
+		"nome" : "MOTHERBOARD AM4 - ASROCK B450M AC",
+		"existencia" : 0,
+		"preco" : 9239,
+		"preco_compra" : 6467
+	},
+	{
+		"id" : 3,
+		"nome" : "MOTHERBOARD AM4 - ASROCK B550M HDV",
+		"existencia" : 0,
+		"preco" : 8299,
+		"preco_compra" : 5809
+	},
+	{
+		"id" : 4,
+		"nome" : "MOTHERBOARD AM4 - GIGABYTE GA-A320M",
+		"existencia" : 0,
+		"preco" : 7499,
+		"preco_compra" : 5249
+	},
+	{
+		"id" : 5,
+		"nome" : "MOTHERBOARD AM4 - GIGABYTE GA-A520M",
+		"existencia" : 0,
+		"preco" : 8289,
+		"preco_compra" : 5802
+	},
+	{
+		"id" : 6,
+		"nome" : "MOTHERBOARD AM4 - GIGABYTE GA",
+		"existencia" : 0,
+		"preco" : 12499,
+		"preco_compra" : 8749
+	},
+	{
+		"id" : 7,
+		"nome" : "PROCESADOR AMD ATHLON 3000G 3.5 GHZ",
+		"existencia" : 0,
+		"preco" : 18989,
+		"preco_compra" : 13292
+	},
+	{
+		"id" : 8,
+		"nome" : "PROCESADOR AMD APU A10 9700 3.8 GHZ",
+		"existencia" : 0,
+		"preco" : 19499,
+		"preco_compra" : 13649
+	},
+	{
+		"id" : 9,
+		"nome" : "PROCESADOR AMD RYZEN 5 5600X 3.7 GHZ",
+		"existencia" : 0,
+		"preco" : 32799,
+		"preco_compra" : 22959
+	},
+	{
+		"id" : 10,
+		"nome" : "MEMORIA RAM DDR3 - 4GB 1600 MHZ",
+		"existencia" : 0,
+		"preco" : 3699,
+		"preco_compra" : 2589
+	},
+	{
+		"id" : 11,
+		"nome" : "MEMORIA RAM DDR3 - 4GB 1600 MHZ ",
+		"existencia" : 0,
+		"preco" : 4199,
+		"preco_compra" : 2939
+	},
+	{
+		"id" : 12,
+		"nome" : "MEMORIA RAM DDR3 - 4GB 1866 MHZ ",
+		"existencia" : 0,
+		"preco" : 4599,
+		"preco_compra" : 3219
+	},
+	{
+		"id" : 13,
+		"nome" : "PLACA DE VIDEO GEFORCE G 210 1GB MSI",
+		"existencia" : 0,
+		"preco" : 5599,
+		"preco_compra" : 3919
+	},
+	{
+		"id" : 14,
+		"nome" : "PLACA DE VIDEO GEFORCE G 210 1GB EVGA",
+		"existencia" : 0,
+		"preco" : 5899,
+		"preco_compra" : 4129
+	},
+	{
+		"id" : 15,
+		"nome" : "PLACA DE VIDEO GEFORCE GT 710 1GB MSI",
+		"existencia" : 0,
+		"preco" : 6689,
+		"preco_compra" : 4682
+	}
+]
