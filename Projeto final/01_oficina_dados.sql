@@ -15,6 +15,7 @@ INSERT INTO alunos (nome, data_nascimento, id_turma) VALUES
 ('Mário Souza', '2003-01-04', 2); 
 
 
+
 -- financeiro
 INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estornaveis, v_liquido, estornado) VALUES
 ('creditcard', 500, 25, 1, 475,0),
@@ -34,4 +35,3 @@ INSERT INTO pedidos (n_matricula, id_transacao, status_pagamento) VALUES
 (1, 1, 'pago'),
 (3, 2, 'pendente'),
 (2, 3, 'pago');
-
