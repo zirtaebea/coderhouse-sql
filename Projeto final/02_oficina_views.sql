@@ -52,3 +52,5 @@ CREATE OR REPLACE VIEW alunos_por_turma AS
 		JOIN turmas t ON (t.id_turma = a.id_turma)
 		GROUP BY a.id_turma
 		ORDER BY t.id_turma asc);
+
+SELECT * FROM alunos_por_turma;
