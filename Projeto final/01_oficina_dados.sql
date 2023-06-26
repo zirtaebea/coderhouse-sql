@@ -1,4 +1,4 @@
-use projeto_final;
+use Projeto_final;
 
 -- dados turma
 INSERT INTO turmas (horario_turma, qt_aulas) VALUES
