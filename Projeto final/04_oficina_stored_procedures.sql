@@ -14,8 +14,6 @@ BEGIN
 END;
 //
 
-CALL ordem_tabela('pedidos', 'id_pedido', 'desc');
-
 -- 2) inserir novo aluno no db
 DELIMITER // 
 CREATE PROCEDURE `novo_aluno` (a_nome VARCHAR(50), a_dnasc DATE, turma INT)
@@ -24,7 +22,3 @@ BEGIN
     (a_nome, a_dnasc, turma);
 END;
 //
-
-CALL novo_aluno('Matheus Lima', '1996-11-09', 3);
-SELECT * FROM alunos;
-

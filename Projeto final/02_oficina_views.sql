@@ -2,11 +2,11 @@
 -- 1) view de status de pagamento por aluno - aluno nome + contato + metodo pagamento + status do pagamento + total pago
 
 CREATE OR REPLACE VIEW pagamento_alunos AS
-	(	SELECT h.n_matricula, a.nome, h.contato, f.metodo_pagamento, 
+	(	SELECT h.n_matricula, p.id_pedido, a.nome, h.contato, f.metodo_pagamento, 
 		p.status_pagamento, f.total_pago
 		FROM alunos a 
 		JOIN historico_alunos h ON (a.id_aluno = h.id_aluno) 
-		JOIN pedidos p ON (p.n_matricula = h.n_matricula)
+		JOIN pedidos p ON (p.id_pedido = h.id_pedido)
 		JOIN financeiro f ON (f.id_transacao = p.id_transacao)
 		WHERE a.id_aluno = h.id_aluno);
         
