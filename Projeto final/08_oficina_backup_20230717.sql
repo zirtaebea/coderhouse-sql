@@ -1,3 +1,6 @@
+-- DADOS DAS TABELAS
+-- LOG_ALUNOS, LOG_HISTORICO_ALUNOS, ALUNOS, FINANCEIRO, HISTORICO_ALUNOS, PEDIDOS E TURMAS
+
 -- MySQL dump 10.13  Distrib 8.0.33, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: Projeto_final
