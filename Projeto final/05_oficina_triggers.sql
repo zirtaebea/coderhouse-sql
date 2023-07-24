@@ -36,11 +36,11 @@ BEGIN
                 FROM pedidos p 
                 WHERE p.id_pedido = NEW.id_pedido);
 
-    IF PEDIDO = 'recusado' THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'ALUNO NÃO REALIZOU O PAGAMENTO';
+    IF PEDIDO = 'aprovado' THEN
+		INSERT INTO LOG_HISTORICO_ALUNOS VALUES (NEW.id_pedido, SESSION_USER(), NOW());
     ELSE
-        INSERT INTO LOG_HISTORICO_ALUNOS VALUES (NEW.id_pedido, SESSION_USER(), NOW());
+       SIGNAL SQLSTATE '45000'
+       SET MESSAGE_TEXT = 'ALUNO NÃO REALIZOU O PAGAMENTO';
     END IF;
 END$$
 DELIMITER ;
