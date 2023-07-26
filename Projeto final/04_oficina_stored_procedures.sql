@@ -27,7 +27,7 @@ END;
 DELIMITER //
 CREATE PROCEDURE `inserir_historico`(pedido INT, turma INT, aluno INT, data_insc DATE, contato VARCHAR(20), experiencia BIT, expect VARCHAR(200), freq INT)
 BEGIN
-       INSERT INTO historico_alunos (id_pedido, id_turma, id_aluno, data_insc, contato, experiencia, expectativas, frequencia)
-       VALUES (pedido, turma, aluno, data_insc, contato, experiencia, expect, freq);
+    INSERT INTO historico_alunos (id_pedido, id_turma, id_aluno, data_insc, contato, experiencia, expectativas, frequencia)
+    VALUES (pedido, turma, aluno, data_insc, contato, experiencia, expect, freq);
 END;
 //
